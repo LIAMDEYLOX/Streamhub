@@ -1,0 +1,226 @@
+.image1:active{
+    margin: auto;
+    animation: stretchAndReset1 1s ease-in-out forwards;
+}
+@keyframes stretchAndReset1 {
+    0% {
+        transform: scale(1, 1) translate(0, 0); 
+    }
+    25% {
+        transform: scale(1.9, 1.9) translate(0, 0); 
+    }
+    50% {
+        transform: scale(1.5, 1.5) translate(0, 0); 
+    }
+    100% {
+        transform: scale(1.7, 1.7) translate(63%, 30%);
+    }
+}
+
+.image2:hover{
+    margin: auto;
+    animation: stretchAndReset2 1s ease-in-out forwards;
+}
+@keyframes stretchAndReset2 {
+    0% {
+        transform: scale(1, 1) translate(0, 0); 
+    }
+    25% {
+        transform: scale(1.9, 1.9) translate(0, 0); 
+    }
+    50% {
+        transform: scale(1.5, 1.5) translate(0, 0); 
+    }
+    100% {
+        transform: scale(1.7, 1.7) translate(0, 30%);
+    }
+}
+
+.image3:hover{
+    margin: auto;
+    animation: stretchAndReset3 1s ease-in-out forwards;
+}
+@keyframes stretchAndReset3 {
+    0% {
+        transform: scale(1, 1) translate(0, 0); 
+    }
+    25% {
+        transform: scale(1.9, 1.9) translate(0, 0); 
+    }
+    50% {
+        transform: scale(1.5, 1.5) translate(0, 0); 
+    }
+    100% {
+        transform: scale(1.7, 1.7) translate(-63%, 30%);
+    }
+}
+
+.image4:hover{
+    margin: auto;
+    animation: stretchAndReset4 1s ease-in-out forwards;
+}
+@keyframes stretchAndReset4 {
+    0% {
+        transform: scale(1, 1) translate(0, 0); 
+    }
+    25% {
+        transform: scale(1.9, 1.9) translate(0, 0); 
+    }
+    50% {
+        transform: scale(1.5, 1.5) translate(0, 0); 
+    }
+    100% {
+        transform: scale(1.7, 1.7) translate(63%, -30%);
+    }
+}
+
+.image5:hover{
+    margin: auto;
+    animation: stretchAndReset5 1s ease-in-out forwards;
+}
+@keyframes stretchAndReset5 {
+    0% {
+        transform: scale(1, 1) translate(0, 0); 
+    }
+    25% {
+        transform: scale(1.9, 1.9) translate(0, 0); 
+    }
+    50% {
+        transform: scale(1.5, 1.5) translate(0, 0); 
+    }
+    100% {
+        transform: scale(1.7, 1.7) translate(0, -30%);
+    }
+}
+
+.image6:hover{
+    margin: auto;
+    animation: stretchAndReset6 1s ease-in-out forwards;
+}
+@keyframes stretchAndReset6 {
+    0% {
+        transform: scale(1, 1) translate(0, 0); 
+    }
+    25% {
+        transform: scale(1.9, 1.9) translate(0, 0); 
+    }
+    50% {
+        transform: scale(1.5, 1.5) translate(0, 0); 
+    }
+    100% {
+        transform: scale(1.7, 1.7) translate(-63%, -30%);
+    }
+}
+
+.image1:not(:hover) {
+    animation: shrinkAndReset1 1s ease forwards;
+}
+
+@keyframes shrinkAndReset1 {
+    0% {
+        transform: scale(1.7, 1.7) translate(63%, 30%); 
+    }
+    25% {
+        transform: scale(1.5, 1.5) translate(0%, 0%); 
+    }
+    50% {
+        transform: scale(1.9, 1.9) translate(0%, 0%); 
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+}
+
+.image2:not(:hover) {
+    animation: shrinkAndReset2 1s ease forwards;
+}
+
+@keyframes shrinkAndReset2 {
+    0% {
+        transform: scale(1.7, 1.7) translate(63%, 30%); 
+    }
+    25% {
+        transform: scale(1.5, 1.5) translate(0%, 0%); 
+    }
+    50% {
+        transform: scale(1.9, 1.9) translate(0%, 0%); 
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+}
+
+.image3:not(:hover) {
+    animation: shrinkAndReset3 1s ease forwards;
+}
+
+@keyframes shrinkAndReset3 {
+    0% {
+        transform: scale(1.7, 1.7) translate(63%, 30%); 
+    }
+    25% {
+        transform: scale(1.5, 1.5) translate(0%, 0%); 
+    }
+    50% {
+        transform: scale(1.9, 1.9) translate(0%, 0%); 
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+}
+
+.image4:not(:hover) {
+    animation: shrinkAndReset4 1s ease forwards;
+}
+
+@keyframes shrinkAndReset4 {
+    0% {
+        transform: scale(1.7, 1.7) translate(63%, 30%); 
+    }
+    25% {
+        transform: scale(1.5, 1.5) translate(0%, 0%); 
+    }
+    50% {
+        transform: scale(1.9, 1.9) translate(0%, 0%); 
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+}
+.image5:not(:hover) {
+    animation: shrinkAndReset5 1s ease forwards;
+}
+
+@keyframes shrinkAndReset5 {
+    0% {
+        transform: scale(1.7, 1.7) translate(63%, 30%); 
+    }
+    25% {
+        transform: scale(1.5, 1.5) translate(0%, 0%); 
+    }
+    50% {
+        transform: scale(1.9, 1.9) translate(0%, 0%); 
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+}
+
+.image6:not(:hover) {
+    animation: shrinkAndReset6 1s ease forwards;
+}
+
+@keyframes shrinkAndReset6 {
+    0% {
+        transform: scale(1.7, 1.7) translate(63%, 30%); 
+    }
+    25% {
+        transform: scale(1.5, 1.5) translate(0%, 0%); 
+    }
+    50% {
+        transform: scale(1.9, 1.9) translate(0%, 0%); 
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+}

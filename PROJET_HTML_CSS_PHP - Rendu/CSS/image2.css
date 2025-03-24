@@ -1,0 +1,168 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex; /* Utilisation de flexbox pour une disposition flexible */
+}
+
+body {
+    color: white;
+    background-color: #141414; /* Fond sombre */
+}
+
+/* image de fond mise sans succès 
+body{
+    line-height: 0.8;
+    background-image: url('../images/shooter.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+*/
+
+.container {
+    display: flex; /* Disposition des éléments en ligne avec flexbox */
+    width: 100%;
+    padding: 20px;
+}
+
+.left {
+    flex: 1; /* La section de gauche occupe tout l'espace disponible */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Disposition en colonne */
+    justify-content: space-between; /* Espacement des éléments à l'intérieur */
+}
+
+.right img {
+    border-radius: 10px; /* Arrondir les coins des images */
+}
+
+.left {
+    margin-right: 50px;
+    border-radius: 10px;
+    background-color: #4444447a; /* Fond semi-transparent pour la section de gauche */
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold; /* Texte en gras pour le titre */
+}
+
+.subtitle {
+    font-size: 14px;
+    font-style: italic; /* Texte en italique pour le sous-titre */
+    margin-top: 10px;
+}
+
+.description {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold; /* Texte en gras pour la description */
+    width: 80%; /* Largeur de la description */
+    line-height: 40px; /* Espacement des lignes du texte */
+}
+
+.episode-controls {
+    margin-top: 50px;
+    display: flex;
+    align-items: left; /* Aligner les éléments à gauche */
+}
+
+.watch-button {
+    background: #ff4500; /* Couleur orange pour le bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; /* Curseur en forme de main sur le bouton */
+    margin-right: 20px;
+}
+
+.season-button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centrer les éléments à l'intérieur de la section droite */
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.right a {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    text-decoration: none; /* Retirer le soulignement du lien */
+    color: white;
+    padding: 5px;
+    font-weight: bold; /* Lien en gras */
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #ff4500; /* Bordure orange autour du lien */
+}
+
+.dropdown {
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.dropdown-menu-ep {
+    position: absolute;
+    background-color: #444; /* Fond sombre pour le menu déroulant */
+    min-width: 112px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Ombre autour du menu */
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 0;
+    opacity: 0; /* Menu caché par défaut */
+    visibility: hidden; /* Menu invisible par défaut */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition fluide pour l'affichage du menu */
+}
+
+.dropdown-menu-s {
+    position: absolute;
+    background-color: #444;
+    min-width: 83px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 0;
+    opacity: 0; /* Menu caché par défaut */
+    visibility: hidden; /* Menu invisible par défaut */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition fluide pour l'affichage du menu */
+}
+
+li {
+    list-style: none; /* Enlever les puces des éléments de liste */
+    padding: 10px;
+    color: white;
+    cursor: pointer; /* Curseur pointer au survol */
+}
+
+li:hover {
+    background-color: #555; /* Couleur de fond lorsque l'élément est survolé */
+    border-radius: 5px; /* Arrondir les coins des éléments survolés */
+}
+
+.dropdown:hover .dropdown-menu-ep, 
+.dropdown:hover .dropdown-menu-s {
+    opacity: 1; /* Rendre le menu visible au survol */
+    visibility: visible; /* Le menu devient visible */
+}

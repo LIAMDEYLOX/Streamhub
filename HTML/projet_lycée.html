@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>code barre autorisés</title>
+<style>
+    .top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+</style>
+<style>
+    div.a {
+        text-align: center;
+    }
+    input
+{
+  height: 70px;
+  width: 430px;
+  font-size: 1em;
+}
+</style>
+
+</head>
+<FONT size = "6pt">
+<FONT face="arial">
+<div class="top-left">
+    <form action="modifier_projet.php" method="post">
+    <input type="submit" value="Modifier" />
+    </form>
+    <br>
+    Codes barres autorisés : 
+    <br>
+</div>
+<div class="top-right">
+    <form action="truncate_projet.php" method="post">
+    <input type="submit" value="Vider" />
+    </form>
+    <br>
+    Codes barres scannés : 
+    <br>
+</div>
+</FONT>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="a">
+    <form action="enregistrement_projet.php" method="post">
+    <FONT size="15pt">
+    <br/>
+    <FONT face="arial">Code barre :</FONT>
+    <input name="code_barre" type="text" size="13" maxlenght="13" placeholder="nouveau code barre" required autofocus/><br/>
+    <br/>
+    <br/>
+    <input type="submit" value="Envoyer"/><br/>
+    </FONT>
+    </form>
+</div>
+</html>

@@ -1,0 +1,168 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex; /* Utilisation de flexbox pour aligner le contenu */
+}
+
+body {
+    color: white;
+    background-color: #141414; /* Fond sombre pour le site */
+}
+
+/* Image de fond mise sans succès (commentée) 
+body {
+    line-height: 0.8;
+    background-image: url('../HTML/images/cooking.png');
+    background-size: cover; /* Couverture de l'image 
+    background-position: center; /* Centrer l'image 
+    background-repeat: no-repeat; /* Pas de répétition 
+    background-attachment: fixed; /* Fixe l'image de fond 
+}
+*/
+
+.container {
+    display: flex; /* Utilisation de flexbox pour organiser les colonnes */
+    width: 100%;
+    padding: 20px;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Disposition en colonne */
+    justify-content: space-between; /* Espace entre les éléments */
+}
+
+.right img {
+    border-radius: 10px; /* Arrondir les coins de l'image */
+}
+
+.left {
+    margin-right: 50px;
+    border-radius: 10px;
+    background-color: #4444447a; /* Fond semi-transparent pour la section de gauche */
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold; /* Titre principal avec un texte en gras */
+}
+
+.subtitle {
+    font-size: 14px;
+    font-style: italic; /* Sous-titre en italique */
+    margin-top: 10px;
+}
+
+.description {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold; /* Description avec texte en gras */
+    width: 80%; /* Largeur de la description */
+    line-height: 40px; /* Espacement entre les lignes de texte */
+}
+
+.episode-controls {
+    margin-top: 50px;
+    display: flex;
+    align-items: left; /* Alignement à gauche des boutons */
+}
+
+.watch-button {
+    background: #ff4500; /* Bouton orange */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; /* Clic possible sur le bouton */
+    margin-right: 20px;
+}
+
+.season-button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centre le contenu */
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.right a {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    text-decoration: none; /* Retirer le soulignement du lien */
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #ff4500; /* Bordure orange autour du lien */
+}
+
+.dropdown {
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.dropdown-menu-ep {
+    position: absolute;
+    background-color: #444; /* Fond sombre pour le menu déroulant */
+    min-width: 112px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Ombre autour du menu */
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 0;
+    opacity: 0; /* Menu caché par défaut */
+    visibility: hidden; /* Menu invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition fluide pour l'apparition du menu */
+}
+
+.dropdown-menu-s {
+    position: absolute;
+    background-color: #444;
+    min-width: 83px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 0;
+    opacity: 0; /* Menu caché par défaut */
+    visibility: hidden; /* Menu invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition fluide pour l'apparition du menu */
+}
+
+li {
+    list-style: none; /* Enlever les puces des éléments de liste */
+    padding: 10px;
+    color: white;
+    cursor: pointer; /* Curseur pointer au survol */
+}
+
+li:hover {
+    background-color: #555; /* Couleur de fond au survol */
+    border-radius: 5px; /* Coins arrondis au survol */
+}
+
+.dropdown:hover .dropdown-menu-ep, 
+.dropdown:hover .dropdown-menu-s {
+    opacity: 1; /* Menu visible au survol */
+    visibility: visible; /* Le menu devient visible */
+}

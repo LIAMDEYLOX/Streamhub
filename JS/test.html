@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de Films</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: white;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .movie {
+            background: #222;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        }
+        .movie img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .movie h3 {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Recherche de Films</h1>
+    <input type="text" id="searchInput" placeholder="Entrez un film..." />
+    <button onclick="searchMovie()">Rechercher</button>
+
+    <div class="movies-container" id="moviesContainer"></div>
+
+    <script>
+        const API_KEY = "TON_API_KEY";  // Remplace par ta clé API TMDb
+        const BASE_URL = "https://api.themoviedb.org/3";
+        const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
+
+        async function searchMovie() {
+            let query = document.getElementById("searchInput").value;
+            if (!query) return;
+
+            let response = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}&language=fr`);
+            let data = await response.json();
+
+            displayMovies(data.results);
+        }
+
+        function displayMovies(movies) {
+            let container = document.getElementById("moviesContainer");
+            container.innerHTML = ""; // Vide le conteneur avant d'afficher les nouveaux résultats
+
+            movies.forEach(movie => {
+                let movieElement = document.createElement("div");
+                movieElement.classList.add("movie");
+
+                movieElement.innerHTML = `
+                    <img src="${IMAGE_URL + movie.poster_path}" alt="${movie.title}">
+                    <h3>${movie.title}</h3>
+                `;
+
+                container.appendChild(movieElement);
+            });
+        }
+    </script>
+
+</body>
+</html>

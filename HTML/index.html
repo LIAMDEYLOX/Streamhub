@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>un premier exemple</title>
+    <link rel="stylesheet" type="text/css" href="./MonFichier.css" />
+    <script type="text/javascript" src="./MonFichier.js"></script>
+    <FONT size = "6pt">
+    <FONT face="arial">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur la page d'exmple des balises HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Menu Déroulant</a></li>
+                <li><a href="#section2">Tableau</a></li>
+                <li><a href="#section3">Listes</a></li>
+                <li><a href="#section4">Image</a></li>
+                <li><a href="#section5">Formulaire</a></li>
+                <li><a href="#section6">Titres</a></li>
+                <li><a href="#section7">Audio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section1"><h4>Menu déroulant</h4>
+        <div>
+            <FONT aria-setsize="10pt">
+                <select name="classe">
+                    <option value="Thomas">Thomas</option>
+                    <option value="Florian">Florian</option>
+                    <option value="Liam.P">Liam.P</option>
+                    <option value="Louka">Louka</option>
+                    <option value="Mayzer">Mayzer</option>
+                    <option value="Claude">Claude</option>
+                    <option value="Eva">Eva</option>
+                    <option value="Mouloud">Mouloud</option>
+                    <option value="Thomas">Thomas</option>
+                    <option value="Hermann">Hermann</option>
+                    <option value="Tania">Tania</option>
+                    <option value="Leilou">Leilou</option>
+                    <option value="Noé">Noé</option>
+                    <option value="Jermôme">Jermôme</option>
+                    <option value="Emilienne">Emilienne</option>
+                    <option value="Nicolas">Nicolas</option>
+                    <option value="Liam.F">Liam.F</option>
+                </select>
+            </FONT>
+            
+        </div>
+    </section>
+    <section id="section2">
+        <h2>Tableau</h2>
+        <table>
+            <caption>Tableau</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">Classe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>graçons</td>
+                    <td>filles</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="section3">
+        <h2>Liste ordonnée et désordonnée</h2>
+        <ul>
+            <li><b>Elément 1</b></li>
+                <ul>
+                    <li>Sous Elément 1</li>
+                    <li>Sous Elément 2</li>
+                </ul>
+            <li><b>Elément 2</b></li>
+            <ul>
+                <li>Sous Elément 1</li>
+                <li>Sous Elément 2</li>
+            </ul>
+            <li><b>Elément 3</b></li>
+            <ul>
+                <li>Sous Elément 1</li>
+                <li>Sous Elément 2</li>
+            </ul>
+            <li><b>Elément 4</b></li>
+            <ul>
+                <li>Sous Elément 1</li>
+                <li>Sous Elément 2</li>
+            </ul>
+        </ul>
+        <ol>
+            <li><b>Premier Elément</b></li>
+            <ol>
+                <li>Premier Sous Elément</li>
+                <li>Deuxième Sous Elément</li>
+            </ol>
+            <li><b>Deuxième Elément</b></li>
+            <ol>
+                <li>Premier Sous Elément</li>
+                <li>Deuxième Sous Elément</li>
+            </ol>
+            <li><b>Troisième Elément</b></li>
+            <ol>
+                <li>Premier Sous Elément</li>
+                <li>Deuxième Sous Elément</li>
+            </ol>
+            <li><b>Quatrième Elément</b></li>
+            <ol>
+                <li>Premier Sous Elément</li>
+                <li>Deuxième Sous Elément</li>
+            </ol>
+        </ol>
+    </section>
+    <section id="section4">
+        <h2>Image</h2>
+        <img class="tonk"
+        src="Images/Char Leclerc.jpg"
+        alt="image"
+        title="Char Leclerc">
+        <br>
+        <img class="vin"
+        src="Images/vin.jpg"
+        alt="image"
+        title="vin">
+        <br>
+        <img class="tonk"
+        src="Images/pain.jpg"
+        alt="image"
+        title="pain">
+    </section>
+    <section id="section5">
+        <h2>Formulaire</h2>
+        <form>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom"><br><br>
+            <label for="choix">Choisissez une option :</label>
+            <select id="choix" name="choix">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select><br><br>
+            <fieldset>
+                <legend>Informations supplémentaires</legend>
+                <label for="age">Âge :</label>
+                <input type="number" id="age" name="age">
+            </fieldset>
+        </form>
+    </section>
+    <section id="section6">
+        <h2>Titres</h2>
+        <h3>Titres de différents niveaux</h3>
+        <h4>Niveau 4</h4>
+        <h5>Niveau 5</h5>
+        <h6>Niveau 6</h6>
+        <p>Paragraphe normal avec un balise <span>span</span> pour ajouter du style</p>
+    </section>
+    <section id="section7">
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="Sons/putined.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <audio controls>
+            <source src="Sons/taco-bell-bong-sfx.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <audio controls>
+            <source src="Sons/Reverb_fart_sound_effect.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+    </section>
+</body>
+</html>
