@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000, #ff4500); /* Dégradé de fond du noir à l'orange */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centre le contenu horizontalement et verticalement */
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent noir */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombre pour donner un effet de profondeur */
+    text-align: center;
+    width: 470px;
+    height: 500px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.container .profile-pic {
+    width: 100px;
+    height: 100px;
+    background: gray; /* Image de profil en gris par défaut */
+    border-radius: 50%; /* Image de profil circulaire */
+    margin: 0 auto 20px;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background: #222; /* Fond sombre pour les champs de saisie */
+    color: white;
+    font-size: 14px;
+    margin-right: 53px;
+    margin-left: 0px;
+    max-width: 200px;
+}
+
+.date_naissance input {
+    margin-right: 116px;
+}
+
+.container input::placeholder {
+    color: #aaa; /* Couleur gris clair pour les placeholders */
+}
+
+.container button {
+    position: absolute;
+    width: 20%;
+    left: 40%; /* Centrage du bouton */
+    bottom: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4500; /* Fond orange pour le bouton */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Transition douce lors du survol */
+}
+
+.container button:hover {
+    background: #b83501; /* Couleur du bouton au survol */
+}
+
+p {
+    color: rgb(189, 189, 189); /* Texte de paragraphe en gris clair */
+}
+
+a {
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.664); /* Lien de couleur gris avec transparence */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7e7e7e; /* Couleur du lien au survol */
+}
+
+.container form {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser lorsque la taille change */
+}

@@ -1,0 +1,291 @@
+body {
+    margin: none;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+hr {
+    border-color: #ff4500; /* Couleur de la bordure de la ligne */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 99.5%;
+    padding: 10px;
+    position: sticky; /* Fixe la barre de navigation en haut */
+    top: 0;
+    z-index: 1000; /* Assure que la navbar reste au-dessus des autres éléments */
+}
+
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000000; /* Fond sombre pour la bannière */
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5%; 
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+/* Bordure dégradée sans animation par défaut */
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff5e00, #000000); /* Dégradé de couleur */
+    background-size: 100% 100%; /* Dégradé */
+    border-radius: 5%; 
+    z-index: -1; /* Placer le dégradé derrière le texte */
+}
+
+.navbar a:hover {
+    background-color: gray; /* Change la couleur de fond au survol */
+    color: white;
+    transform: scale(1.1); /* Agrandir le bouton au survol */
+}
+
+.logo {
+    margin-right: 20px;
+    font-size: 70px;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+.navbar .search-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .search-bar input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #ff4500; /* Bordure orange */
+    background-color: #1c1c1c; /* Fond sombre */
+    color: white; /* Texte blanc */
+    outline: none; /* Retirer la bordure bleue sur focus */
+    transition: border-color 0.3s, background-color 0.3s; /* Transition pour les changements de bordure et de fond */
+}
+
+.navbar .search-bar input::placeholder {
+    color: #cccccc; /* Couleur du texte de l'espace réservé */
+}
+
+.navbar .search-bar input:focus {
+    border-color: #ff6600; /* Bordure orange vif au focus */
+    background-color: #333333; /* Fond légèrement plus clair au focus */
+}
+.navbar .profile {
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5%; 
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+/* Bordure dégradée sans animation par défaut */
+.navbar .nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff5e00, #000000); /* Dégradé de couleur */
+    background-size: 100% 100%; /* Dégradé */
+    border-radius: 5%; 
+    z-index: -1; /* Placer le dégradé derrière le texte */
+}
+
+.navbar .nav-links a:hover {
+    background-color: gray; /* Change la couleur de fond au survol */
+    color: white;
+    transform: scale(1.1); /* Agrandir le bouton au survol */
+}
+
+/* Conteneur du carrousel avec les images mises en avant */
+.carousel-container-featured {
+    position: relative;
+    width: 1700px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container-featured .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transition lors du changement de slide */
+    width: 100%;
+}
+
+.carousel-container-featured .slidea {
+    flex: 0 0 100%;
+}
+
+.slidea img {
+    height: 900px;
+    width: 100%;
+    object-fit: cover; /* Ajuste l'image sans la déformer */
+}
+
+/* Texte superposé sur les images du carrousel */
+.carousel-overlay-text {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    background: linear-gradient(90deg, #000000 55%, #000000da 60%, #00000000 100%);
+    padding: 830px 1555px;
+    position: absolute;
+}
+
+.text-carousel {
+    position: absolute;
+    text-align: left;
+}
+
+.text-carousel h2 {
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    font-size: 40px;
+    color: white;
+}
+
+/* Conteneurs pour les autres carrousels */
+.carousel-container-1, 
+.carousel-container-2,
+.carousel-container-3, 
+.carousel-container-4 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    margin: 20px 0 20px;
+    padding: 0px;
+    height: auto;
+    display: flex;
+}
+
+/* Définition de la structure du carrousel */
+.carousel-container-1 .carousel-slides, 
+.carousel-container-2 .carousel-slides,
+.carousel-container-3 .carousel-slides, 
+.carousel-container-4 .carousel-slides {
+    gap: 2%;
+    padding: 20px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 20%; /* Chaque image occupe 20% de la largeur */
+    margin: 0px;
+}
+
+.slide img:hover {
+    transform: scale(1.1); /* Agrandir l'image au survol */
+    border: 3px solid rgba(255, 255, 255, 0.623); /* Bordure blanche au survol */
+}
+
+.slide img {
+    border: 2px solid transparent; /* Bordure initiale pour une transition fluide */
+    width: 100%;
+    height: 200px;
+    transition: all 0.3s ease; /* Transition lors du survol */
+}
+
+/* Boutons de navigation pour chaque carrousel */
+.carousel-container-1 .prev, .carousel-container-1 .next,
+.carousel-container-2 .prev, .carousel-container-2 .next, 
+.carousel-container-3 .prev, .carousel-container-3 .next,
+.carousel-container-4 .prev, .carousel-container-4 .next {
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgba(177, 177, 177, 0.7);
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    border-color: #ff4500;
+    font-size: 24px;
+    z-index: 10; /* Assurer que les boutons sont au-dessus des images */
+    border-radius: 20%;
+    font-weight: bold;
+}
+
+.carousel-container-1 .prev:hover, .carousel-container-1 .next:hover,
+.carousel-container-2 .prev:hover, .carousel-container-2 .next:hover,
+.carousel-container-3 .prev:hover, .carousel-container-3 .next:hover,
+.carousel-container-4 .prev:hover, .carousel-container-4 .next:hover {
+    color: white;
+    background-color: #555555a9; /* Changer l'apparence du bouton au survol */
+}
+
+/* Positionnement des boutons "précédent" et "suivant" */
+.carousel-container-1 .prev, 
+.carousel-container-2 .prev, 
+.carousel-container-3 .prev, 
+.carousel-container-4 .prev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+.carousel-container-1 .next, 
+.carousel-container-2 .next, 
+.carousel-container-3 .next, 
+.carousel-container-4 .next {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
